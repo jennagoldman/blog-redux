@@ -9,3 +9,12 @@ export const deletePost = index => ({
   type: DELETE_POST,
   payload: index
 });
+
+export const UPDATE_POST = 'UPDATE_POST';
+export const updatePost = (index, post) => ({
+  type: UPDATE_POST,
+  payload: {
+    index,
+    post
+  }
+})
