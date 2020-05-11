@@ -1,4 +1,4 @@
-import { addComment, ADD_COMMENT } from './commentActions.js';
+import { addComment, ADD_COMMENT, deleteComment, DELETE_COMMENT } from './commentActions.js';
 
 describe('comments actions', () => {
   it('creates an ADD_COMMENT action', () => {
