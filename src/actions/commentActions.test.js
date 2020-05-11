@@ -12,4 +12,16 @@ describe('comments actions', () => {
       }
     })
   })
+
+  it('creates a DELETE_COMMENT action', () =>{
+    const action = deleteComment(0, 0);
+
+    expect(action).toEqual({
+      type: DELETE_COMMENT,
+      payload: {
+        postIndex: 0,
+        commentIndex: 0
+      }
+    })
+  })
 })
