@@ -1,4 +1,4 @@
-import { addPost, ADD_POST } from './postActions.js';
+import { addPost, ADD_POST, deletePost, DELETE_POST } from './postActions.js';
 
 describe('post actions', () => {
   it('creates an ADD_POST action', () => {
@@ -13,6 +13,15 @@ describe('post actions', () => {
         title: 'Spot is a Good Boy',
         body: 'In fact, Spot is the Best Boy'
       }
+    })
+  })
+
+  it('creates a DELETE_POST action', () => {
+    const action = deletePost(2);
+
+    expect(action).toEqual({
+      type: DELETE_POST,
+      payload: 2
     })
   })
 })
