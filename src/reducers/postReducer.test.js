@@ -18,4 +18,18 @@ describe('posts reducer', () => {
       }
     ])
   })
+
+  it('handles the deletePost action', () => {
+    const state = [
+      {
+        title: 'Spot is a Good Boy',
+        body: 'In fact, Spot is the Best Boy'
+      }
+    ];
+    const action = deletePost(0);
+    
+    const newState = reducer(state, action);
+
+    expect(newState).toEqual([]);
+  })
 })
